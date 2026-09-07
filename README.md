@@ -1,15 +1,18 @@
 # Racket Rebar Service Website
 
-Responsive static website built from the supplied reference design.
+GitHub Pages-ready static website.
 
 ## Files
-- `index.html` — complete page structure/content
-- `style.css` — responsive desktop/tablet/mobile styling
-- `script.js` — mobile menu, active navigation, back-to-top and quote form
-- `assets/` — image assets cropped from the supplied reference
+- index.html
+- style.css
+- script.js
+- images/
 
-## Run
-Open `index.html` directly in a modern browser, or serve the folder with any static web server.
+## Publish on GitHub Pages
+1. Create a GitHub repository named `Racket-Rebar-Service`.
+2. Upload all files and the `images` folder.
+3. Open **Settings → Pages**.
+4. Select **Deploy from a branch**, choose `main` and `/ (root)`.
+5. Save. GitHub will provide the live Pages URL.
 
-## Before launch
-Replace the placeholder phone number/email and update the WhatsApp number in `index.html` and `script.js` if needed. Replace the reference-derived images with licensed project photography if publishing commercially.
+Replace the placeholder phone number in `index.html` before publishing.
