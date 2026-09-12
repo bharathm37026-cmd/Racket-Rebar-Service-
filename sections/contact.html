@@ -1,0 +1,122 @@
+<!-- =======================================
+     CONTACT – sections/contact.html
+     ======================================= -->
+<section id="contact" class="section contact" aria-labelledby="contact-title">
+  <div class="container contact-grid">
+
+    <!-- Contact Info -->
+    <div class="contact-info">
+      <span class="contact-kicker">Contact Us</span>
+      <h2 class="contact-title" id="contact-title">
+        Let's Discuss Your <span>Project</span>
+      </h2>
+      <p class="contact-desc">
+        Send us your drawings and project requirements. We will review them and
+        get back to you with a clear quote.
+      </p>
+
+      <div class="contact-details">
+        <a class="contact-detail-item" href="mailto:info@rocketrebarservice.com" aria-label="Email us">
+          <span class="detail-icon" aria-hidden="true">✉</span>
+          info@rocketrebarservice.com
+        </a>
+        <a class="contact-detail-item" href="tel:+919361817219" aria-label="Call us">
+          <span class="detail-icon" aria-hidden="true">📞</span>
+          +91 93618 17219
+        </a>
+        <a
+          class="contact-detail-item"
+          href="https://wa.me/919361817219"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="WhatsApp us"
+        >
+          <span class="detail-icon" aria-hidden="true">💬</span>
+          WhatsApp Us
+        </a>
+      </div>
+    </div>
+
+    <!-- Quote Form -->
+    <form id="quote-form" class="quote-form" novalidate aria-label="Request a quote">
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="field-name">Full Name <span aria-hidden="true">*</span></label>
+          <input
+            id="field-name"
+            name="name"
+            type="text"
+            placeholder="Your name"
+            required
+            autocomplete="name"
+          >
+        </div>
+        <div class="form-group">
+          <label for="field-company">Company</label>
+          <input
+            id="field-company"
+            name="company"
+            type="text"
+            placeholder="Company name"
+            autocomplete="organization"
+          >
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="field-email">Email <span aria-hidden="true">*</span></label>
+          <input
+            id="field-email"
+            name="email"
+            type="email"
+            placeholder="you@company.com"
+            required
+            autocomplete="email"
+          >
+        </div>
+        <div class="form-group">
+          <label for="field-phone">Phone</label>
+          <input
+            id="field-phone"
+            name="phone"
+            type="tel"
+            placeholder="Phone number"
+            autocomplete="tel"
+          >
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="field-service">Service Required</label>
+        <select id="field-service" name="service">
+          <option value="Rebar Estimation &amp; Quantity Takeoff">Rebar Estimation &amp; Quantity Takeoff</option>
+          <option value="Rebar Detailing">Rebar Detailing</option>
+          <option value="Bar Bending Schedule (BBS)">Bar Bending Schedule (BBS)</option>
+          <option value="Foundation &amp; Footing Estimating">Foundation &amp; Footing Estimating</option>
+          <option value="Beam, Column &amp; Slab Estimating">Beam, Column &amp; Slab Estimating</option>
+          <option value="Stair &amp; Miscellaneous Rebar">Stair &amp; Miscellaneous Rebar</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="field-details">Project Details <span aria-hidden="true">*</span></label>
+        <textarea
+          id="field-details"
+          name="details"
+          placeholder="Tell us about your project — drawings, location, deadline, etc."
+          required
+          rows="5"
+        ></textarea>
+      </div>
+
+      <button class="btn btn-red form-submit" type="submit" id="form-submit-btn">
+        Send Quote Request <span aria-hidden="true">→</span>
+      </button>
+      <p class="form-note">By submitting, your email app will open with the request prepared for our team.</p>
+
+    </form>
+
+  </div>
+</section>

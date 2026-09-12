@@ -1,0 +1,171 @@
+/* =========================================
+   HERO – Full-width hero section
+   ========================================= */
+
+.hero {
+  position: relative;
+  min-height: 560px;
+  overflow: hidden;
+  display: flex;
+  align-items: stretch;
+}
+
+/* ── Background image ── */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('../assets/images/hero.jpeg');
+  background-size: cover;
+  background-position: center 30%;
+  z-index: 0;
+}
+
+/* ── Gradient overlay ── */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg,
+      rgba(0,0,0,0.97) 0%,
+      rgba(0,0,0,0.92) 38%,
+      rgba(0,0,0,0.55) 62%,
+      rgba(0,0,0,0.20) 100%
+    ),
+    linear-gradient(0deg, rgba(0,0,0,0.45) 0%, transparent 40%);
+  z-index: 1;
+}
+
+/* ── Container inside hero — uses natural .container width & margin ── */
+.hero > .container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  /* NOTE: width and margin-inline come from .container in base.css
+     Do NOT add width:100% here or it overrides the container padding */
+}
+
+/* ── Hero content — constrained to left portion ── */
+.hero-content {
+  max-width: 620px;
+  padding: 65px 0 55px;
+  /* No width:100% — avoids overriding .container */
+}
+
+/* ── Eyebrow ── */
+.hero-eyebrow {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0 0 8px;
+}
+
+/* ── H1: ROCKET REBAR (white) / SERVICE (red block) ── */
+.hero h1 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 76px;
+  font-weight: 900;
+  line-height: 0.92;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+  color: #fff;
+  margin: 0 0 14px;
+}
+
+.hero h1 span {
+  display: block;
+  color: var(--red);
+}
+
+/* ── Subtitle ── */
+.hero-subtitle {
+  font-size: 15px;
+  color: #ccc;
+  margin: 0 0 5px;
+  font-weight: 500;
+}
+
+.hero-subtitle i {
+  color: #666;
+  font-style: normal;
+  margin: 0 8px;
+}
+
+/* ── Tagline ── */
+.hero-tagline {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--red);
+  margin: 0 0 8px;
+}
+
+/* ── Body copy ── */
+.hero-copy {
+  font-size: 13.5px;
+  color: #ddd;
+  max-width: 480px;
+  margin: 0 0 24px;
+  line-height: 1.6;
+}
+
+/* ── Feature badges ── */
+.hero-badges {
+  display: flex;
+  align-items: center;
+  margin: 0 0 26px;
+}
+
+.hero-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 18px;
+  border-right: 1px solid rgba(255,255,255,0.28);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.3;
+  letter-spacing: 0.3px;
+}
+
+.hero-badge:first-child { padding-left: 0; }
+.hero-badge:last-child  { border-right: 0; }
+
+.badge-icon {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+}
+
+/* ── CTA buttons ── */
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .hero { min-height: 500px; }
+  .hero h1 { font-size: 60px; }
+}
+
+@media (max-width: 600px) {
+  .hero { min-height: 600px; }
+  .hero h1 { font-size: 50px; }
+  .hero-content { padding: 50px 0 44px; }
+  .hero-subtitle { font-size: 13px; }
+
+  .hero-badges {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  .hero-badge {
+    padding: 0;
+    border: 0;
+  }
+  .hero-actions .btn { width: 100%; }
+}

@@ -1,0 +1,248 @@
+/* =========================================
+   PROCESS – How We Work steps
+   ========================================= */
+
+.process {
+  background:
+    linear-gradient(180deg, rgba(10,11,12,0.90), rgba(8,9,10,0.95)),
+    url('../assets/images/rebar-placing.jpg') center / cover fixed;
+}
+
+/* ── Steps grid ── */
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+  position: relative;
+}
+
+/* ── Single step ── */
+.step {
+  text-align: center;
+  position: relative;
+  padding: 8px 4px;
+}
+
+/* ── Connector arrow between steps ── */
+.step:not(:last-child)::after {
+  content: '→';
+  position: absolute;
+  right: -14px;
+  top: 56px;
+  color: var(--red);
+  font-size: 20px;
+  line-height: 1;
+  z-index: 2;
+}
+
+/* ── Step number ── */
+.step-number {
+  display: block;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 15px;
+  font-weight: 900;
+  color: var(--red);
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+/* ── Icon circle ── */
+.step-icon {
+  width: 60px;
+  height: 60px;
+  border: 2px solid var(--red);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;
+  background: #0c0d0e;
+  font-size: 26px;
+  color: #fff;
+  transition: background var(--transition), transform var(--transition);
+}
+
+.step:hover .step-icon {
+  background: var(--red);
+  transform: scale(1.08);
+}
+
+/* ── Step heading ── */
+.step h3 {
+  font-size: 11.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  margin-bottom: 6px;
+  color: #fff;
+}
+
+/* ── Step description ── */
+.step p {
+  font-size: 11px;
+  color: #bbb;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ── Standards sub-section ── */
+.standards-band {
+  padding: 36px 0;
+  background:
+    linear-gradient(90deg, rgba(7,8,9,0.96), rgba(7,8,9,0.88)),
+    url('../assets/images/rebar-detail.jpg') center / cover fixed;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.standards-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 1fr;
+  gap: 0;
+}
+
+.standards-col {
+  padding: 0 32px;
+  border-right: 1px solid var(--line-light);
+}
+
+.standards-col:first-child { padding-left: 0; }
+.standards-col:last-child  { border-right: 0; }
+
+.standards-label {
+  display: block;
+  color: var(--red);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.standards-col p {
+  font-size: 11.5px;
+  color: #bbb;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+/* ── Standards logos ── */
+.std-logos {
+  display: flex;
+  gap: 24px;
+  align-items: flex-end;
+}
+
+.std-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.std-logo-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 26px;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1;
+}
+
+.std-logo-sub {
+  font-size: 7px;
+  text-transform: uppercase;
+  color: #999;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* ── Country flags ── */
+.country-row {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+
+.country-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.country-flag {
+  display: block;
+  line-height: 1;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.country-flag svg {
+  display: block;
+}
+
+.country-name {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ccc;
+}
+
+/* ── Why choose us list ── */
+.why-list {
+  list-style: none;
+  display: grid;
+  gap: 8px;
+  margin: 0;
+}
+
+.why-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #ccc;
+}
+
+.why-list li::before {
+  content: '✓';
+  color: var(--red);
+  font-weight: 900;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1100px) {
+  .process-grid {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 28px;
+  }
+  .step:nth-child(3)::after,
+  .step:nth-child(6)::after { display: none; }
+}
+
+@media (max-width: 860px) {
+  .standards-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .standards-col {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+    padding: 0 0 24px;
+  }
+  .standards-col:last-child { border-bottom: 0; padding-bottom: 0; }
+}
+
+@media (max-width: 700px) {
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 28px;
+  }
+  .step::after { display: none !important; }
+}
+
+@media (max-width: 440px) {
+  .process-grid { grid-template-columns: 1fr; }
+}

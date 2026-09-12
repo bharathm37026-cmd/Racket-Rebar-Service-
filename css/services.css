@@ -1,0 +1,99 @@
+/* =========================================
+   SERVICES – Complete Rebar Solutions
+   ========================================= */
+
+.services {
+  background:
+    linear-gradient(180deg, rgba(10,11,12,0.88), rgba(6,7,8,0.94)),
+    url('../assets/images/rebar-detail.jpg') center / cover fixed;
+}
+
+/* ── Grid ── */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+}
+
+/* ── Card ── */
+.service-card {
+  background: rgba(250, 250, 250, 0.96);
+  color: #1a1c1f;
+  min-height: 220px;
+  padding: 24px 14px 20px;
+  text-align: center;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  transition: transform var(--transition), box-shadow var(--transition);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 32px rgba(224, 25, 32, 0.18);
+}
+
+/* ── Icon ── */
+.service-icon {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.service-icon img,
+.service-icon svg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Using inline SVG / emoji fallback */
+.service-icon-svg {
+  font-size: 38px;
+  color: var(--red);
+  line-height: 1;
+}
+
+/* ── Card title ── */
+.service-card h3 {
+  font-size: 12.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  color: #1a1c1f;
+}
+
+/* ── Card body ── */
+.service-card p {
+  font-size: 11.5px;
+  color: #444;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ── CTA row ── */
+.services-cta {
+  text-align: center;
+  margin-top: 28px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1100px) {
+  .service-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 700px) {
+  .service-grid { grid-template-columns: repeat(2, 1fr); }
+  .service-card { min-height: auto; padding: 20px 12px 18px; }
+}
+
+@media (max-width: 440px) {
+  .service-grid { grid-template-columns: 1fr; }
+}
