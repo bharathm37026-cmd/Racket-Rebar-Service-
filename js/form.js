@@ -15,11 +15,11 @@ function initForm() {
   form.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const data    = new FormData(form);
-    const name    = data.get('name')    || '';
+    const data = new FormData(form);
+    const name = data.get('name') || '';
     const company = data.get('company') || '';
-    const email   = data.get('email')   || '';
-    const phone   = data.get('phone')   || '';
+    const email = data.get('email') || '';
+    const phone = data.get('phone') || '';
     const service = data.get('service') || '';
     const details = data.get('details') || '';
 
@@ -36,7 +36,7 @@ function initForm() {
     );
 
     window.location.href =
-      `mailto:info@rocketrebarservice.com?subject=${subject}&body=${body}`;
+      `mailto:Rocketrebarservice@outlook.com?subject=${subject}&body=${body}`;
   });
 }
 

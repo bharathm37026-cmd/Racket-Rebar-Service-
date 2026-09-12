@@ -3,9 +3,9 @@
    ========================================= */
 
 .projects {
-  background:
+  /* background:
     linear-gradient(rgba(238,238,238,0.97), rgba(238,238,238,0.97)),
-    url('../assets/images/rebar-detail.jpg') center / cover fixed;
+    url('../assets/images/rebar-detail.jpg') center / cover fixed; */
   color: #111;
 }
 

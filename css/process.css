@@ -3,9 +3,9 @@
    ========================================= */
 
 .process {
-  background:
+  /* background:
     linear-gradient(180deg, rgba(10,11,12,0.90), rgba(8,9,10,0.95)),
-    url('../assets/images/rebar-placing.jpg') center / cover fixed;
+    url('../assets/images/rebar-placing.jpg') center / cover fixed; */
 }
 
 /* ── Steps grid ── */
@@ -88,9 +88,9 @@
 /* ── Standards sub-section ── */
 .standards-band {
   padding: 36px 0;
-  background:
+  /* background:
     linear-gradient(90deg, rgba(7,8,9,0.96), rgba(7,8,9,0.88)),
-    url('../assets/images/rebar-detail.jpg') center / cover fixed;
+    url('../assets/images/rebar-detail.jpg') center / cover fixed; */
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
