@@ -1,4 +1,4 @@
-# Racket Rebar Service Website
+# Rocket Rebar Service Website
 
 Responsive static website built from the supplied reference design.
 
